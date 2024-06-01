@@ -1,13 +1,13 @@
 .weather-day {
-    margin: 1rem;
+    /* margin: 1rem; */
     padding: 1rem;
     display: flex;
     flex-direction: column;
     width: 80%;
     min-height: 200px;
     border-radius: 22px;
-    margin-bottom: 2.5%;
-    margin-bottom: 0.5em;
+    /* margin-bottom: 2.5%;
+    margin-bottom: 0.5em; */
 
 }
 

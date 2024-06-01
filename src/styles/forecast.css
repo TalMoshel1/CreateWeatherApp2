@@ -42,7 +42,6 @@
 @media (orientation: portrait) {
   .forecast {
     flex-direction: row;
-    margin-bottom: 1.5em;
     flex-direction: row;
     overflow-x: auto;
   }
