@@ -11,6 +11,8 @@ export function weatherCondition(sentence) {
       return "clouds.jpg";
     case lowerCaseSentence.includes("showers"):
       return "showers.jpeg";
+    case lowerCaseSentence.includes("clear"):
+      return "clear"
     case lowerCaseSentence.includes("thunderstorms"):
       return "thunderstorms.jpg";
     default:

@@ -83,6 +83,7 @@ export function Current() {
           className="button-1"
           onClick={() => dispatch(addToFavorites({ ...currentValues }))}
         >
+          <p color='grey favorite'>click to add to favorite</p>
           <AiFillHeart color='grey'/>
         </IsFavoriteContainer>
       ) }
@@ -92,6 +93,7 @@ export function Current() {
           className="button-1"
           onClick={() => dispatch(removeFromFavorites({ Key: currentValues.Key }))}
         >
+          <p color='red favorite'>click to remove from favorites</p>
           <AiFillHeart  color='red'/>
         </IsFavoriteContainer>
       )}
@@ -121,4 +123,8 @@ const IsFavoriteContainer = styled.div`
 background-color: ${(props) => props.theme.colors.itemBackground};
 border: 1px solid ${(props) => props.theme.colors.borderColor};
 cursor: pointer;
+
+p {
+  color: ${(props) => props.theme.colors.lettersBig};
+}
 `
