@@ -24,6 +24,10 @@ export function Home() {
     }
   }, [current]);
 
+
+  useEffect(()=>{
+    console.log(imgUrl)
+  })
   const isConnected =
     current?.fetchStatus !== "error" && current?.fetchStatus !== "";
 
@@ -40,7 +44,7 @@ export function Home() {
             src={
               imgUrl === "sunny.jpg"
                 ? Sunny
-                : imgUrl === "clouds" || imgUrl === "cloudy"
+                : imgUrl === "clouds.jpg" || imgUrl === "cloudy.jpg"
                 ? CanvaCloudsPhone
                 : ""
             }
