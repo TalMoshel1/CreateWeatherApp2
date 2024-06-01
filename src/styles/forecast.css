@@ -6,9 +6,9 @@
   justify-content: space-evenly;
   /* flex-wrap: wrap; */
   text-align: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  min-width: 100%;
+  padding-right: 1em;
+  padding-left: 1em;
+  width: 100%;
   gap: 1rem;
   min-width: 300px;
 }
