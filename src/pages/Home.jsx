@@ -28,7 +28,6 @@ export function Home() {
         weatherCondition(current.data.WeatherText),
         current.data.WeatherText
       );
-      // setImgUrl(weatherCondition('thunderstorms.jpg'));
       setImgUrl(weatherCondition(current.data.WeatherText));
     }
   }, [current]);
@@ -48,7 +47,6 @@ export function Home() {
     >
       {isConnected ? (
         <ContentWrapper>
-          {/* <CanvaCloudsPhone/> */}
           <img
             className="imgContainer"
             src={`${
@@ -67,7 +65,6 @@ export function Home() {
           <div className="search-current-container">
             <Search />
             <Current />
-            {/* {isMobile && <AddToFavorites />} */}
           </div>
           <Forecast />
         </ContentWrapper>
@@ -81,27 +78,16 @@ export function Home() {
   );
 }
 
-const BackgroundImage = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(${(props) => props.imgUrl});
-  background-size: 100% 100%; /* Adjusted */
-  background-position: center;
-  z-index: -1;
-`;
-
 const HomeStyle = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   overflow-x: hidden;
   position: relative;
   width: 100%;
-  min-height: 80%;
+  height: 100vh; /* Ensure full viewport height */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
-  // margin-top: ${(props) => (props.isConnected ? "10svh" : "")};
 
   .noConnectionToAPI {
     position: absolute;
@@ -129,16 +115,17 @@ const ContentWrapper = styled.div`
   z-index: 1;
   background-color: transparent;
   width: 100vw;
-  // min-height: 100%;
-  min-height: 80svh;
+  height: 100%; /* Ensure it takes full height */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .imgContainer {
     border: 1px solid green;
     position: absolute;
-    min-height: 100%;
-    width: 100vw;
+    height: 100%; /* Ensure it takes full height */
+    width: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 0;
   }
 `;
