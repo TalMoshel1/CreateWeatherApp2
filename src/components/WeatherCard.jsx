@@ -85,6 +85,7 @@ export const WeatherCard = ({
 };
 
 const WeatherCardContainer = styled.section`
+margin-top: 2rem;
   .fetchingState {
     color: ${(props) => props.theme.colors.lettersBig};
   }

@@ -24,10 +24,9 @@ export function Home() {
     }
   }, [current]);
 
-
-  useEffect(()=>{
-    console.log(imgUrl)
-  })
+  useEffect(() => {
+    console.log(imgUrl);
+  });
   const isConnected =
     current?.fetchStatus !== "error" && current?.fetchStatus !== "";
 
@@ -39,17 +38,20 @@ export function Home() {
     >
       {isConnected ? (
         <ContentWrapper>
-          <img
-            className="imgContainer"
-            src={
-              imgUrl === "sunny.jpg"
-                ? Sunny
-                : imgUrl === "clouds.jpg" || imgUrl === "cloudy.jpg"
-                ? CanvaCloudsPhone
-                : ""
-            }
-            alt=""
-          />
+          {!theme.darkmode && (
+            <img
+              className="imgContainer"
+              src={
+                imgUrl === "sunny.jpg"
+                  ? Sunny
+                  : imgUrl === "clouds.jpg" || imgUrl === "cloudy.jpg"
+                  ? CanvaCloudsPhone
+                  : ""
+              }
+              alt=""
+            />
+          )}
+
           <div className="search-current-container">
             <Search />
             <Current />

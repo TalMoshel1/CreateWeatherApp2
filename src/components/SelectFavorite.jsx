@@ -13,7 +13,8 @@ const ScrollContainer = styled.section`
   flex-direction: column;
 
   border:  ${(props) => props.theme.colors.borderColor};
-  background-color: ${(props) => props.theme.colors.headerBackground};
+  border-radius: 22px;
+  background-color: transparent;
 
 
   @media (orientation: landscape) {
@@ -27,25 +28,21 @@ const ScrollContainer = styled.section`
 const CityItem = styled.div`
   width:100%;
   border: 1px solid #eee;
+  border-radius: 22px;
   cursor: pointer;
-  transition: background-color 100ms ease-in-out;
+  // transition: background-color 100ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 2rem;
   // border:  ${(props) => props.theme.colors.borderColor};
-  // background-color: ${(props) => props.theme.colors.headerBackground};
+  background-color: ${(props) => props.theme.colors.headerBackground};
   color: ${(props) => props.theme.colors.lettersBig};
 
   .removeCityItem:hover {
     animation: squish 200ms;
   }
 
-  @media (orientation: landscape) {
-    .& {
-      // width: 25%;
-    }
-  }
 
   h2:hover {
     background-color: ${(props) => props.theme.colors.sliderBtn};
@@ -141,11 +138,13 @@ const SelectFavoritesStyle = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: ${(props) => props.theme.colors.headerBackground};
+background-color: transparent;
 
 
 .citySearchInput{
-  background-color: ${(props) => props.theme.colors.headerBackground};
+  background-color: ${(props) => props.theme.colors.background};
+  border: 1px solid ${(props) => props.theme.colors.borderColor};
+  border-radius:22px;
 }
 .citySearchInput::placeholder, .citySearchInput{
   color: ${(props) => props.theme.colors.lettersBig};
@@ -154,7 +153,7 @@ background-color: ${(props) => props.theme.colors.headerBackground};
 .citySearchInput:hover {
   cursor: pointer;
   animation: squish 200ms ease-in-out;
-  background-color:${(props) => props.theme.colors.background};
+  // background-color:${(props) => props.theme.colors.background};
 }
 
 `
