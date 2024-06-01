@@ -67,7 +67,7 @@ const HomeStyle = styled.div`
   overflow-x: hidden;
   position: relative;
   width: 100%;
-  height: 90vh; /* Ensure it covers at least the full viewport height */
+  height: 95vh; /* Ensure it covers at least the full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
