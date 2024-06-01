@@ -110,6 +110,7 @@ const ContentWrapper = styled.div`
 
   .imgContainer {
     border: 1px solid green;
+    object-fit: fill;
     position: absolute;
     width: 100%;
     height: 100%; /* Ensure it takes full height */

@@ -102,11 +102,11 @@ const DotsContainer = styled.div`
 
 @media (orientation: landscape) {
   
-    bottom: 7.5rem;
+    bottom: 2rem;
 }
 
 @media (orientation: portrait) {
-  bottom: 6rem;
+  bottom: 2rem;
 
   }
 
