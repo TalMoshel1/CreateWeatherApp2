@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { useIsMobile } from "../Context/Context.jsx";
 import { MdError } from "react-icons/md";
 import { Search } from "../containers/Search.jsx";
 import { Current } from "../containers/Current.jsx";
@@ -15,26 +14,15 @@ import CanvaClouds from "../gallery/canvaClouds.png";
 import CanvaCloudsPhone from "../gallery/canvaCloudsPhone.png";
 
 export function Home() {
-  // const isMobile = useIsMobile();
   const theme = useSelector((state) => state.theme);
   const current = useSelector((state) => state.current);
   const [imgUrl, setImgUrl] = useState();
 
-  console.log(current);
-
   useEffect(() => {
     if (current.data.WeatherText) {
-      console.log(
-        weatherCondition(current.data.WeatherText),
-        current.data.WeatherText
-      );
       setImgUrl(weatherCondition(current.data.WeatherText));
     }
   }, [current]);
-
-  useEffect(() => {
-    console.log(imgUrl, Sunny);
-  }, [imgUrl]);
 
   const isConnected =
     current?.fetchStatus !== "error" && current?.fetchStatus !== "";
@@ -49,17 +37,13 @@ export function Home() {
         <ContentWrapper>
           <img
             className="imgContainer"
-            src={`${
+            src={
               imgUrl === "sunny.jpg"
                 ? Sunny
-                : imgUrl === "dreary"
-                ? ""
                 : imgUrl === "clouds" || imgUrl === "cloudy"
                 ? Clouds
-                : imgUrl === "showers"
-                ? ""
                 : ""
-            }`}
+            }
             alt=""
           />
           <div className="search-current-container">
@@ -83,8 +67,7 @@ const HomeStyle = styled.div`
   overflow-x: hidden;
   position: relative;
   width: 100%;
-  height: 100vh; /* Ensure full viewport height */
-  overflow: hidden;
+  min-height: 90vh; /* Ensure it covers at least the full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
@@ -115,17 +98,20 @@ const ContentWrapper = styled.div`
   z-index: 1;
   background-color: transparent;
   width: 100vw;
-  height: 100%; /* Ensure it takes full height */
+  flex-grow: 1; /* Allow content to determine the height */
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
   .imgContainer {
     border: 1px solid green;
     position: absolute;
-    height: 100%; /* Ensure it takes full height */
     width: 100%;
+    height: 100%; /* Ensure it takes full height */
     left: 0;
     z-index: 0;
+    object-fit: cover; /* Ensures the image covers the container */
+    top: 0;
   }
 `;
