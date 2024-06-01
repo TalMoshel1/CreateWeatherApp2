@@ -130,7 +130,7 @@ const ContentWrapper = styled.div`
   background-color: transparent;
   width: 100vw;
   // min-height: 100%;
-  min-height: 90svh;
+  min-height: 80svh;
   overflow: hidden;
 
   .imgContainer {
