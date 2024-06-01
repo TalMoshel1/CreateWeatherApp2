@@ -37,29 +37,46 @@ export function Home() {
     console.log(imgUrl, Sunny);
   }, [imgUrl]);
 
-  const isConnected = current?.fetchStatus !== "error" && current?.fetchStatus !== "";
+  const isConnected =
+    current?.fetchStatus !== "error" && current?.fetchStatus !== "";
 
   return (
-    <HomeStyle className="home" darkmode={theme.darkmode} isConnected={isConnected}>
-      {isConnected ?     
-      <ContentWrapper>
-              {/* <CanvaCloudsPhone/> */}
-        <img className='imgContainer' src={`${imgUrl === 'sunny.jpg' ? Sunny : imgUrl === 'dreary'? '': (imgUrl === 'clouds' || imgUrl === 'cloudy')?Clouds: imgUrl === 'showers'? '':''}`} alt="" />
-        <div className="search-current-container">
-          <Search />
-          <Current />
-          {/* {isMobile && <AddToFavorites />} */}
+    <HomeStyle
+      className="home"
+      darkmode={theme.darkmode}
+      isConnected={isConnected}
+    >
+      {isConnected ? (
+        <ContentWrapper>
+          {/* <CanvaCloudsPhone/> */}
+          <img
+            className="imgContainer"
+            src={`${
+              imgUrl === "sunny.jpg"
+                ? Sunny
+                : imgUrl === "dreary"
+                ? ""
+                : imgUrl === "clouds" || imgUrl === "cloudy"
+                ? Clouds
+                : imgUrl === "showers"
+                ? ""
+                : ""
+            }`}
+            alt=""
+          />
+          <div className="search-current-container">
+            <Search />
+            <Current />
+            {/* {isMobile && <AddToFavorites />} */}
+          </div>
+          <Forecast />
+        </ContentWrapper>
+      ) : (
+        <div className="noConnectionToAPI">
+          <MdError className="icon" />
+          <h1>No connection to API</h1>
         </div>
-        <Forecast />
-      </ContentWrapper> :
-      
-      <div className='noConnectionToAPI'>
-              <MdError className='icon'/>
-              <h1>No connection to API</h1>
-              </div>
-              
-              }
-
+      )}
     </HomeStyle>
   );
 }
@@ -81,8 +98,8 @@ const HomeStyle = styled.div`
   overflow-x: hidden;
   position: relative;
   width: 100%;
-  min-height: 90%;
-  overflow:hidden;
+  min-height: 80%;
+  overflow: hidden;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
   // margin-top: ${(props) => (props.isConnected ? "10svh" : "")};
 
@@ -91,21 +108,19 @@ const HomeStyle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
   }
 
-  .noConnectionToAPI > h1, .icon {
+  .noConnectionToAPI > h1,
+  .icon {
     color: ${(props) => props.theme.colors.lettersBig};
-
   }
 
   .noConnectionToAPI > .icon {
-      font-size:3rem;
+    font-size: 3rem;
   }
 
   .noConnectionToAPI > .icon {
     width: 35vw;
-
   }
 `;
 
@@ -119,12 +134,11 @@ const ContentWrapper = styled.div`
   overflow: hidden;
 
   .imgContainer {
-    border:1px solid green;
+    border: 1px solid green;
     position: absolute;
     min-height: 100%;
     width: 100vw;
     left: 0;
-    z-index:1;
+    z-index: 1;
   }
 `;
-
