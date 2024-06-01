@@ -39,9 +39,9 @@ export function Home() {
             className="imgContainer"
             src={
               imgUrl === "sunny.jpg"
-                ? CanvaCloudsPhone
+                ? Sunny
                 : imgUrl === "clouds" || imgUrl === "cloudy"
-                ? Clouds
+                ? CanvaCloudsPhone
                 : ""
             }
             alt=""
