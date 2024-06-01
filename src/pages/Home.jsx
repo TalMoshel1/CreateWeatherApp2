@@ -82,6 +82,7 @@ const HomeStyle = styled.div`
   position: relative;
   width: 100%;
   min-height: 90%;
+  overflow:hidden;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
   // margin-top: ${(props) => (props.isConnected ? "10svh" : "")};
 
