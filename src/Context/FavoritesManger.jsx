@@ -25,8 +25,8 @@ const FavoritesManager = () => {
   } = useFavoriteIndex();
 
   return (
-    <FavoritesContainer className='?'>
-      <SelectFavoriteContainer className='?'>
+    <FavoritesContainer className="?">
+      <SelectFavoriteContainer className="?">
         <SelectFavorite
           favoriteIndex={favoriteIndex}
           setFavoriteIndex={setFavoriteIndex}
@@ -52,7 +52,7 @@ const FavoritesManager = () => {
 const SliderContainer = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   max-width: 100vw;
-  height: 100%;
+  height: 80%;
   margin: 0 auto;
   min-width: 55%;
   width: 100%;
@@ -79,10 +79,10 @@ const FavoritesContainer = styled.section`
 `;
 
 const SelectFavoriteContainer = styled.div`
-background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   overscroll-behavior: contain;
   // margin-top: 2.25rem;
-  margin-top: 2svh;;
+  margin-top: 2svh;
   top: 10svh;
   position: absolute;
   width: 50%;
