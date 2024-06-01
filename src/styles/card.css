@@ -1,6 +1,6 @@
 .weather-day {
-    margin: 0px;
-    padding: 1em;
+    margin: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     width: 80%;
