@@ -1,0 +1,77 @@
+.search-section  {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.english-only {
+  margin-top: 5px;
+}
+
+
+.search-section p {
+  width:100%;
+  height:30px;
+  color: red;
+  font-weight: 15000;
+  margin-top: 1em;
+}
+
+h2, p {
+    font-size: 1rem;
+  
+  }
+
+  .homeSearch {
+    border-radius: 22px;
+    padding: '300px';
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 150px;
+    border: 1px solid grey
+
+  }
+
+  .citySearchInput {
+    border:none;
+    width: 100%;
+    text-align: center;
+    border-bottom: none;
+    height: 5svh;
+
+
+
+  }
+
+  .citySearchInput:hover {
+    border: 2px solid black;
+  }
+
+  /* @media (orientation: portrait), (max-width: 700px) {
+    .citySearchInput, .cityItem > h2{
+          font-size: 0.8rem;
+    }
+  } */
+
+  @media (orientation: landscape), (min-width: 700px) {
+    .english-only {
+          margin-top: 1.5em;
+    }
+
+ 
+
+
+  }
+
+
+  @media (max-width: 700px) {
+ 
+    .english-only {
+      margin-top: 3.5em;
+}
+
+  }

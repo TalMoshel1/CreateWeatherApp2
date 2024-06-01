@@ -1,0 +1,64 @@
+.current-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-card-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    
+
+}
+
+.current-container {
+    border-radius: 22px;
+    padding:1em;
+}
+
+.current-card-container h1 {
+    font-size: 1rem;
+}
+
+.button-1 {
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em;
+    margin-top: 1em;
+    width: 5rem;
+    
+
+}
+
+.button-1 button {
+    text-align: center;
+}
+
+
+@media (orientation: landscape), (min-width: 700px){
+    .current-page-container {
+        width: 100vw;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin-top: 0em;
+    }
+    .button-1 {
+        margin-top: 0;
+
+    }
+
+    .current-page-container button {
+        text-align: center;
+    }
+
+    .add-to-favorites {
+        margin-top: none;
+    }
+}
