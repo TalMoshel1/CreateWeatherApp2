@@ -9,8 +9,10 @@
 }
 
 .search-current-container{
+    height: 45svh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     position:relative;

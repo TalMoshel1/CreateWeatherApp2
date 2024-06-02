@@ -82,7 +82,7 @@ const SelectFavoriteContainer = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   overscroll-behavior: contain;
   // margin-top: 2.25rem;
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   border-radius: 22px;
   top: 10svh;
   position: absolute;
