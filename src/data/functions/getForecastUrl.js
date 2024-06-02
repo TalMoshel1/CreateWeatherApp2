@@ -3,10 +3,12 @@ export function getForecastUrl(isMetric, cityKey) {
 
   try {
     if (isMetric) {
-      url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityKey}?apikey=eX0BvLwq6EEeVFtvBg7usc23ydzRticl            &metric=true`;
+      url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityKey}?apikey=evfOeo7HTiSJxNySGtxtSOiQvtHlNXqi
+            &metric=true`;
       return url;
     }
-    url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityKey}?apikey=eX0BvLwq6EEeVFtvBg7usc23ydzRticl        `;
+    url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityKey}?apikey=evfOeo7HTiSJxNySGtxtSOiQvtHlNXqi
+        `;
     return url;
   } catch (e) {
     throw new Error("error fetching: ", e);
