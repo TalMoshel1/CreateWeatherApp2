@@ -7,8 +7,13 @@ import { Forecast } from "../containers/Forcast.jsx";
 import "../styles/home.css";
 import styled from "styled-components";
 import { weatherCondition } from "../gallery/whichCurrentWeather.js";
-import Sunny from "../gallery/sunny.jpg";
+import Sunny from "../gallery/sunnyCanva.png";
+import Clearsky from '../gallery/clearSky.png'
+import ShowersCanva from '../gallery/showersCanva.png'
+import ClearCanva from '../gallery/clearSky.png';
+import ThunderStorm from '../gallery/thunderstorms.jpg'
 import Clouds from "../gallery/clouds.jpg";
+import DrearyCanva from '../gallery/drearySky.png'
 import RealisticSunny from "../gallery/realistic.jpg";
 import CanvaClouds from "../gallery/canvaClouds.png";
 import CanvaCloudsPhone from "../gallery/canvaCloudsPhone.png";
@@ -46,7 +51,10 @@ export function Home() {
                   ? Sunny
                   : imgUrl === "clouds.jpg" || imgUrl === "cloudy.jpg"
                   ? CanvaCloudsPhone
-                  : ""
+                  : imgUrl === 'dreary' ? DrearyCanva
+                  : imgUrl === 'showers' ? ShowersCanva
+                  : imgUrl === 'clear' ? Clearsky
+                  : imgUrl === 'thunderstorms' &&  ThunderStorm
               }
               alt=""
             />
