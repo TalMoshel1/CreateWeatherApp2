@@ -8,12 +8,12 @@ import "../styles/home.css";
 import styled from "styled-components";
 import { weatherCondition } from "../gallery/whichCurrentWeather.js";
 import Sunny from "../gallery/sunnyCanva.png";
-import Clearsky from '../gallery/clearSky.png'
-import ShowersCanva from '../gallery/showersCanva.png'
-import ClearCanva from '../gallery/clearSky.png';
-import ThunderStorm from '../gallery/thunderstorms.jpg'
+import Clearsky from "../gallery/clearSky.png";
+import ShowersCanva from "../gallery/showersCanva.png";
+import ClearCanva from "../gallery/clearSky.png";
+import ThunderStorm from "../gallery/thunderstorms.jpg";
 import Clouds from "../gallery/clouds.jpg";
-import DrearyCanva from '../gallery/drearySky.png'
+import DrearyCanva from "../gallery/drearySky.png";
 import RealisticSunny from "../gallery/realistic.jpg";
 import CanvaClouds from "../gallery/canvaClouds.png";
 import CanvaCloudsPhone from "../gallery/canvaCloudsPhone.png";
@@ -51,10 +51,13 @@ export function Home() {
                   ? Sunny
                   : imgUrl === "clouds.jpg" || imgUrl === "cloudy.jpg"
                   ? CanvaCloudsPhone
-                  : imgUrl === 'dreary' ? DrearyCanva
-                  : imgUrl === 'showers' ? ShowersCanva
-                  : imgUrl === 'clear' ? Clearsky
-                  : imgUrl === 'thunderstorms' &&  ThunderStorm
+                  : imgUrl === "dreary"
+                  ? DrearyCanva
+                  : imgUrl === "showers"
+                  ? ShowersCanva
+                  : imgUrl === "clear"
+                  ? Clearsky
+                  : imgUrl === "thunderstorms" && ThunderStorm
               }
               alt=""
             />
@@ -81,7 +84,7 @@ const HomeStyle = styled.div`
   // overflow-x: hidden;
   position: relative;
   width: 100%;
-  height: 95vh; /* Ensure it covers at least the full viewport height */
+  height: 90svh;
   display: flex;
   flex-direction: column;
   justify-content: ${(props) => (props.isConnected ? "flex-start" : "center")};
