@@ -81,7 +81,7 @@ const FavoritesContainer = styled.section`
 const SelectFavoriteContainer = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   overscroll-behavior: contain;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
   border-radius: 22px;
   top: 10svh;
   position: absolute;

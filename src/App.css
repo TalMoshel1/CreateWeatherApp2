@@ -3,9 +3,12 @@
   margin: 0 auto;
   text-align: center;
   height: 100svh;
-  /* overflow:hidden; */
+  overflow-x:hidden;
 }
 
+input {
+  height:5svh;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

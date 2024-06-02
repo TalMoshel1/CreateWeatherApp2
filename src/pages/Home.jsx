@@ -115,10 +115,10 @@ const ContentWrapper = styled.div`
   z-index: 1;
   background-color: transparent;
   width: 100vw;
-  height: 100%;
+  height: fit-content;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
 
   .imgContainer {
     border: 1px solid green;
