@@ -1,9 +1,9 @@
 .weather-day {
     /* margin: 1rem; */
-    padding: 1rem;
+    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
-    max-width: 32%;
+    max-width: 20%;
     min-height: 200px;
     border-radius: 22px;
     /* margin-bottom: 2.5%;
