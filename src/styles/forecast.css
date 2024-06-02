@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  width: 70%;
+  width: 100%;
   gap: 1rem;
   min-width: 300px;
 }
