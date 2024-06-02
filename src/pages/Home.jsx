@@ -78,7 +78,7 @@ export function Home() {
 
 const HomeStyle = styled.div`
   background-color: ${(props) => props.theme.colors.background};
-  overflow-x: hidden;
+  // overflow-x: hidden;
   position: relative;
   width: 100%;
   height: 95vh; /* Ensure it covers at least the full viewport height */
@@ -113,7 +113,7 @@ const ContentWrapper = styled.div`
   background-color: transparent;
   width: 100vw;
   flex-grow: 1; /* Allow content to determine the height */
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
