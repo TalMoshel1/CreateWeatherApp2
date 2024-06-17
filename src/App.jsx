@@ -50,7 +50,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<FavoritesManager />} />
           </Routes>
-          {/* {isMobile && <Header />} */}
         </ThemeProvider>
       </BrowserRouter>
     </>

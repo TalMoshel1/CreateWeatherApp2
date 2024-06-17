@@ -52,7 +52,7 @@ const FavoritesManager = () => {
 const SliderContainer = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   max-width: 100vw;
-  height: 80%;
+  height: 90%;
   margin: 0 auto;
   min-width: 55%;
   width: 100%;
@@ -70,7 +70,7 @@ const FavoritesContainer = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   display: flex;
   justify-content: center;
-  height: 100svh;
+  height: 90svh;
   align-items: flex-start;
   width: 100%;
   overflow: hidden;

@@ -10,13 +10,9 @@ import { weatherCondition } from "../gallery/whichCurrentWeather.js";
 import Sunny from "../gallery/sunnyCanva.png";
 import Clearsky from "../gallery/clearSky.png";
 import ShowersCanva from "../gallery/showersCanva.png";
-import ClearCanva from "../gallery/clearSky.png";
 import ThunderStorm from "../gallery/thunderstorms.jpg";
-import Clouds from "../gallery/clouds.jpg";
 import DrearyCanva from "../gallery/drearySky.png";
-import RealisticSunny from "../gallery/realistic.jpg";
-import CanvaClouds from "../gallery/canvaClouds.png";
-import CanvaCloudsPhone from "../gallery/canvaCloudsPhone.png";
+import CanvaCloudsPhone from "../gallery/canvaClouds.png";
 
 export function Home() {
   const theme = useSelector((state) => state.theme);

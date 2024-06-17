@@ -35,7 +35,6 @@ const CityItem = styled.div`
   justify-content: center;
   align-items: center;
   height: 2rem;
-  // border:  ${(props) => props.theme.colors.borderColor};
   background-color: ${(props) => props.theme.colors.headerBackground};
   color: ${(props) => props.theme.colors.lettersBig};
 

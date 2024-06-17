@@ -9,22 +9,21 @@ import { LuChevronLeftCircle, LuChevronRightCircle } from "react-icons/lu";
 import { WeatherCard } from "./WeatherCard";
 import "../App.css";
 
-
 export const FavoritesSlider = ({
   favoriteIndex,
   setFavoriteIndex,
   showNextFavorite,
   showPreviousFavorite,
 }) => {
-
-  const CitiesFromLocalStorage = useSelector((state) => state.favorites.favorites);
+  const CitiesFromLocalStorage = useSelector(
+    (state) => state.favorites.favorites
+  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.log('CitiesFromLocalStorage :', CitiesFromLocalStorage)
+  console.log("CitiesFromLocalStorage :", CitiesFromLocalStorage);
 
   const { removeFromFavorites } = favoritesSlice.actions;
-
 
   const handleClickRemoveFavorite = (id) => {
     dispatch(removeFromFavorites({ Key: id }));
@@ -38,7 +37,7 @@ export const FavoritesSlider = ({
   return (
     <FavoriteSlide aria-label="Favorites Slider">
       <div
-      className='weatherCardContainer'
+        className="weatherCardContainer"
         style={{
           maxWidth: "100%",
           width: "75%",
@@ -62,7 +61,7 @@ export const FavoritesSlider = ({
       <button
         className="favorite-slider-btn"
         onClick={() => showPreviousFavorite(CitiesFromLocalStorage.length)}
-        style={{ left: 0 , padding: '0.5rem'}}
+        style={{ left: 0, padding: "0.5rem" }}
         aria-label="View Previous Favorite"
       >
         <LuChevronLeftCircle aria-hidden />
@@ -70,15 +69,13 @@ export const FavoritesSlider = ({
       <button
         className="favorite-slider-btn"
         onClick={() => showNextFavorite(CitiesFromLocalStorage.length)}
-        style={{ right: 0,padding: '0.5rem' }}
+        style={{ right: 0, padding: "0.5rem" }}
         aria-label="View Next Favorite"
       >
         <LuChevronRightCircle aria-hidden />
       </button>
 
-      <DotsContainer
-
-      >
+      <DotsContainer>
         {CitiesFromLocalStorage.map((_, index) => (
           <button
             key={index}
@@ -99,30 +96,22 @@ export const FavoritesSlider = ({
 };
 
 const DotsContainer = styled.div`
-
-@media (orientation: landscape) {
-  
+  @media (orientation: landscape) {
     bottom: 2rem;
-}
+  }
 
-@media (orientation: portrait) {
-  bottom: 2rem;
-
+  @media (orientation: portrait) {
+    bottom: 2rem;
   }
 
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: .25rem;
-  
-  `
-
-  
+  gap: 0.25rem;
+`;
 
 const FavoriteSlide = styled.section`
-
-
   width: 100%;
   height: 100%;
   position: relative;
@@ -130,13 +119,12 @@ const FavoriteSlide = styled.section`
   justify-content: center;
   color: ${(props) => props.theme.colors.lettersBig};
 
-
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-    
+
   .favorite-slider-favorite {
     width: 100%;
     height: 100%;
@@ -207,8 +195,8 @@ const FavoriteSlide = styled.section`
   }
   @media (orientation: portrait) {
     .card {
-      width: 100%;
-      height: 60svh;
+      width: 75vw;
+      height: 75vw;
     }
   }
 
@@ -220,6 +208,7 @@ const FavoriteSlide = styled.section`
   }
   .card {
     border: 1px solid black;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
