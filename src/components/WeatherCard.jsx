@@ -57,7 +57,7 @@ export const WeatherCard = ({
 
   return (
     <main
-      aria-hidden={favoriteIndex !== currentIndex}
+      // aria-hidden={favoriteIndex !== currentIndex}
       className="favorite-slider-favorite cardContainer"
       style={{ transform: `translateX(${-100 * favoriteIndex}%)` }}
     >

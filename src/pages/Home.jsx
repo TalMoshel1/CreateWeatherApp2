@@ -77,7 +77,7 @@ export function Home() {
 
 const HomeStyle = styled.div`
   background-color: ${(props) => props.theme.colors.background};
-  // overflow-x: hidden;
+  overflow-x: hidden;
   position: relative;
   width: 100%;
   height: 90svh;
